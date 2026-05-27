@@ -75,6 +75,7 @@ main {
 .main-grid {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
 .main-grid-one {
@@ -83,23 +84,68 @@ main {
 }
 
 .big-img {
+    width: 800px;
+    height: 450px;
 }
+
 .game-info {
+    background-color: #2F4A50;
+    width: 410px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 .game-cover {
 }
+
 .game-description {
+    margin: 0;
+    font-size: 0.875rem;
+    margin: 0 5px;
+    text-align: justify;
+    color: #FFFFFF;
 }
+
 .game-annotation {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 5px;
 }
+
 .release-date {
     display: flex;
+    justify-content: space-between;
+
+    p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #FFFFFF;
+    }
 }
+
 .developer {
     display: flex;
+    justify-content: space-between;
+
+    p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #FFFFFF;
+    }
 }
+
 .publisher {
     display: flex;
+    justify-content: space-between;
+
+    p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #FFFFFF;
+    }
 }
 
 .main-grid-two {
@@ -110,20 +156,64 @@ main {
 }
 
 .system-requirements {
+    background-color: #2F4A50;
+    width: 410px;
+    height: 179px;
+    box-sizing: border-box;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        font-size: 1rem;
+        margin: 0;
+        color: #FFFFFF;
+    }
 }
+
 .requirements {
+    padding-left: 15px;
+
+    p {
+        font-size: 0.875rem;
+        margin: 0;
+    }
 }
 .shopping-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 .by-card {
+    background-color: #2F4A50;
+    display: flex;
+    width: 800px;
+    height: 85px;
+    box-sizing: border-box;
+    padding: 15px;
+    justify-content: space-between;
 }
 .by-lable {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #FFFFFF;
 }
 .price-button {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
 }
 .price {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #FFFFFF;
 }
 .by-button {
+    width: 120px;
+    height: 40px;
+    font-size: 1.5rem;
+    background-color: #B8D0E0;
 }
 
 footer {
@@ -158,13 +248,120 @@ footer {
     }
 }
 
-@media (max-width: 1000px) {
-    main, footer{
+@media (max-width: 1750px) {
+    main, footer {
         max-width: 80%;
         width: 80%;
+    }
+}
+
+@media (max-width: 1530px) {
+    main, footer {
+        max-width: 90%;
+        width: 90%;
+    }
+    
+    main {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1360px) {
+    main, footer {
+        max-width: 100%;
+        width: 100%;
         box-sizing: border-box;
     }
 
+    main {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .header-line {
+}
+.title-name {
+}
+.line-links {
+}
+.game-name {
+    padding: 0;
+}
+.main-grid {
+}
+.main-grid-one {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.big-img {
+}
+.game-info {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 80px);
+}
+.game-cover {
+    width: 366px;
+    height: 160px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+}
+.game-description {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+}
+.game-annotation {
+    grid-column: 1 / 4;
+    grid-row: 3 / 4;
+}
+.release-date {
+}
+.developer {
+}
+.publisher {
+}
+.main-grid-two {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+}
+.system-requirements {
+    height: 220px;
+    width: 408px;
+}
+.requirements {
+}
+.shopping-list {
+    flex-grow: 1;
+}
+.by-card {
+    width: 100%;
+    flex-direction: column;
+    height: 105px;
+    align-items: center;
+    padding: 10px;
+}
+.by-lable {
+    font-size: 1.125rem;
+}
+.price-button {
+}
+.price {
+}
+.by-button {
+}
+.copyright {
+}
+.footer-links {
+}
+
+}
+
+@media (max-width: 1000px) {
     .copyright {
         p {
             font-size: 0.75rem;
@@ -175,19 +372,6 @@ footer {
 @media (max-width: 834px) {
     .header-line {
         width: 100%;
-    }
-
-    main {
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
-    }
-
-    footer {
-        max-width: 100%;
-        width: 100%;
-        box-sizing: border-box;
     }
 }
 
