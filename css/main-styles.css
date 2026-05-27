@@ -88,6 +88,7 @@ main {
     margin-top: 40px;
     margin-bottom: 0px;
 }
+
 .new-games {
     border-top: 2px solid #D92946;
     padding-top: 10px;
@@ -96,6 +97,7 @@ main {
     justify-content: space-around;
     overflow: hidden;
 }
+
 .game-card {
     background-color: #2F4A50;
     width: 190px;
@@ -113,6 +115,7 @@ main {
         margin-bottom: 20px;
     }
 }
+
 .game-description {
     display: flex;
     flex-direction: column;
@@ -126,6 +129,7 @@ main {
         color: #B8D0E0;
     }
 }
+
 .game-score {
 }
 .game-name {
@@ -152,6 +156,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 .like-status {
     color: #FFFFFF;
     font-size: 0.875rem;
@@ -159,6 +164,7 @@ main {
     gap: 0;
     margin: 0;
 }
+
 .buy-button {
     padding: 0;
     margin: 0;
@@ -170,6 +176,7 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 .buy-status {
     color: #FFFFFF;
     font-size: 0.875rem;
@@ -188,6 +195,7 @@ footer {
     align-items: center;
     justify-content: space-between;
 }
+
 .copyright {
     p {
         color: #FFFFFF;
@@ -195,6 +203,7 @@ footer {
         padding: 0;
     }
 }
+
 .footer-links {
     display: flex;
     flex-direction: column;
@@ -238,6 +247,7 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
+
     .first {
     grid-row: span 1;
     grid-column: span 1;
@@ -327,8 +337,7 @@ footer {
     .header-line {
         padding: 0;
     }
-    .title-name {
-    }
+
     .line-links {
         padding: 0;
 
@@ -341,15 +350,10 @@ footer {
         padding: 15px;
     }
 
-    .big-picture {
-    }
-    .first {
-    }
-    .new-games-title {
-    }
     .new-games {
         flex-direction: column;
     }
+
     .game-card {
         width: 100%;
         height: max-content;
@@ -383,15 +387,6 @@ footer {
         }
     }
 
-    .game-score {
-    }
-    .game-name {
-    }
-    .game-genre {
-    }
-    .game-release-date {
-    }
-
     .buttons-case {
         width: 100%;
         flex-direction: row;
@@ -402,13 +397,11 @@ footer {
     .like-button {
         width: 50%;
     }
-    .like-status {
-    }
+
     .buy-button {
         width: 50%;
     }
-    .buy-status {
-    }
+
     .copyright {
         p {
             font-size: 0.75rem;
