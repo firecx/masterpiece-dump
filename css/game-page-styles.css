@@ -64,9 +64,24 @@ main {
 }
 
 .game-name {
+    margin: 0;
+    margin-bottom: 15px;
+    padding-left: 30px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #FF0000;
 }
+
 .main-grid {
+    display: flex;
+    flex-direction: column;
 }
+
+.main-grid-one {
+    display: flex;
+    justify-content: space-between;
+}
+
 .big-img {
 }
 .game-info {
@@ -78,11 +93,22 @@ main {
 .game-annotation {
 }
 .release-date {
+    display: flex;
 }
 .developer {
+    display: flex;
 }
 .publisher {
+    display: flex;
 }
+
+.main-grid-two {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+}
+
 .system-requirements {
 }
 .requirements {
