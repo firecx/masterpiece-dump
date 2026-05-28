@@ -211,7 +211,6 @@ main {
     font-size: 1.5rem;
     color: #FFFFFF;
     height: max-content;
-    margin-left: 5vw;
 }
 
 
@@ -457,7 +456,7 @@ footer {
 
 }
 
-@media (max-width: 550px) {
+@media (max-width: 690px) {
 
     main {
         display: flex;
