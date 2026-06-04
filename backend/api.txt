@@ -1,0 +1,14 @@
+GET /api/games (supports ?q=)
+GET /api/games/{id}
+
+GET /api/genres (supports ?q=)
+GET /api/genres/{id}/games
+
+GET /api/developers (supports ?q=)
+GET /api/developers/{id}/games
+
+GET /api/publishers (supports ?q=)
+GET /api/publishers/{id}/games
+
+(supports ?q=)
+Поиск по имени (прим. /api/games?q=GTA)
