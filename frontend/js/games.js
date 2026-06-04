@@ -70,6 +70,14 @@ document.addEventListener('DOMContentLoaded', () => {
             else alert('Переход к покупке не настроен');
         });
 
+        // make the whole card clickable (except the like and buy buttons)
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.like-button') || e.target.closest('.buy-button')) return;
+            const id = g.id ? encodeURIComponent(g.id) : encodeURIComponent(name);
+            window.location.href = `game-page.html?id=${id}`;
+        });
+
         return card;
     }
 
