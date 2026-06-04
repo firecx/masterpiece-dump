@@ -361,6 +361,10 @@ footer {
 
     .new-games {
         flex-direction: column;
+        max-height: 60vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
     }
 
     .game-card {
