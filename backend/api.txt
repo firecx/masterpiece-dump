@@ -1,4 +1,7 @@
 GET /api/games (supports ?q=)
+    URL: /api/games?limit=10&offset=20
+        limit=10 - 10 игр
+        offset=20 - выдать с 20 игры (20 не включается)
 GET /api/games/{id}
 
 GET /api/genres (supports ?q=)
