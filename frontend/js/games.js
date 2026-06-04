@@ -75,6 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', (e) => {
             if (e.target.closest('.like-button') || e.target.closest('.buy-button')) return;
             const id = g.id ? encodeURIComponent(g.id) : encodeURIComponent(name);
+            try {
+                localStorage.setItem('selectedGame', JSON.stringify(g));
+            } catch (err) {
+                // ignore storage errors
+            }
             window.location.href = `game-page.html?id=${id}`;
         });
 
