@@ -92,6 +92,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!games.length && offset === 0) {
                     showNoGames();
                     hasMore = false;
+                    if (observer) observer.disconnect();
+                    container.removeEventListener('scroll', onScroll);
                     return;
                 }
 
@@ -101,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     hasMore = false;
                     // no more: remove sentinel
                     if (observer) observer.disconnect();
+                    container.removeEventListener('scroll', onScroll);
                 }
             })
             .catch(err => {
@@ -108,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (offset === 0) container.innerHTML = '<p class="no-games">Ошибка загрузки новинок</p>';
                 hasMore = false;
                 if (observer) observer.disconnect();
+                container.removeEventListener('scroll', onScroll);
             })
             .finally(() => {
                 loading = false;
@@ -118,17 +122,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // IntersectionObserver for infinite scroll
     let observer = null;
     try {
+        // If the games container is scrollable, use it as the observer root
         observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) loadMore();
             });
-        }, { rootMargin: '200px' });
+        }, { root: container, rootMargin: '200px' });
     } catch (e) {
         observer = null;
     }
 
     container.appendChild(sentinel);
     if (observer) observer.observe(sentinel);
+
+    // Fallback: also trigger loadMore when user scrolls near the end of the container
+    const SCROLL_THRESHOLD = 100; // px from edge to trigger (works for vertical and horizontal)
+    function onScroll() {
+        if (loading || !hasMore) return;
+        // detect dominant scroll axis
+        const isHorizontal = container.scrollWidth > container.clientWidth && container.scrollWidth > container.scrollHeight;
+        if (isHorizontal) {
+            const distanceFromRight = container.scrollWidth - container.scrollLeft - container.clientWidth;
+            if (distanceFromRight < SCROLL_THRESHOLD) loadMore();
+        } else {
+            const distanceFromBottom = container.scrollHeight - container.scrollTop - container.clientHeight;
+            if (distanceFromBottom < SCROLL_THRESHOLD) loadMore();
+        }
+    }
+    container.addEventListener('scroll', onScroll, { passive: true });
 
     // initial load
     loadMore();
