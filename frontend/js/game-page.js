@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE = 'http://host.docker.internal:8000';
+    const API_BASE = 'http://144.31.78.248:8000';
 
     function getQueryParam(name) {
         const params = new URLSearchParams(window.location.search);

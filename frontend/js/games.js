@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container) return;
     container.innerHTML = ''; // clear static placeholders
 
-    const API_BASE = `http://host.docker.internal:8000`;
+    const API_BASE = `http://144.31.78.248:8000`;
 
     const limit = 10;
     let offset = 0;
