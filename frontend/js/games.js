@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!container) return;
     container.innerHTML = ''; // clear static placeholders
 
-    const API_BASE = `http://localhost:8080`;
+    const API_BASE = `http://localhost:8000`;
 
     const limit = 10;
     let offset = 0;

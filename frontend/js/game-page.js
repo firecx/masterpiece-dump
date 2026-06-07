@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const API_BASE = 'http://localhost:8080';
+    const API_BASE = 'http://localhost:8000';
 
     function getQueryParam(name) {
         const params = new URLSearchParams(window.location.search);
