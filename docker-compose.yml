@@ -9,26 +9,29 @@ services:
       VIRTUAL_HOST: masterpiece-dump.ru
       VIRTUAL_PORT: 80
     depends_on:
-      - nginx-backend
+      - nginx-backend-masterpiece-dump
     networks:
       - proxy-network
-  php:
+    restart: unless-stopped
+    
+  php-backend-masterpiece-dump:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: php-backend
+    container_name: php-backend-masterpiece-dump
     depends_on:
       - postgres
     networks:
-      - app-network
+      - network-masterpiece-dump
     environment:
       - DB_HOST=postgres
       - DB_PORT=5432
       - DB_NAME=lib
       - DB_USER=user
       - DB_PASSWORD=user
+    restart: unless-stopped
 
-  nginx-backend:
+  nginx-backend-masterpiece-dump:
     image: nginx:1.29
     ports:
       - "8000:80"
@@ -36,9 +39,10 @@ services:
       - ./backend/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       - ./backend/:/app:ro
     depends_on:
-      - php
+      - php-backend-masterpiece-dump
     networks:
-      - app-network
+      - network-masterpiece-dump
+    restart: unless-stopped
 
   postgres:
     image: postgres:18-alpine
@@ -48,17 +52,17 @@ services:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=user
     volumes:
-      - postgres_data:/var/lib/postgresql
+      - postgres-data-masterpiece-dump:/var/lib/postgresql
       - ./backend/db/init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - app-network
+      - network-masterpiece-dump
     restart: unless-stopped
 
 volumes:
-  postgres_data:
+  postgres-data-masterpiece-dump:
 
 networks:
-  app-network:
+  network-masterpiece-dump:
     driver: bridge
   proxy-network:
     external: true
