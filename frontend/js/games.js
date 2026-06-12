@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Map API fields from backend example
         //заменить на g.cover_url
         // const img =  'img/plug-game-card.png';
-        const img =  'g.cover_url';
+        const img =  g.cover_url;
         const score = (g.rating !== undefined && g.rating !== null) ? g.rating : (g.score || '0.0');
         const name = g.gname || g.name || g.title || 'Название игры';
         let genres = 'Жанр1, жанр2';
