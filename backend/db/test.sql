@@ -136,8 +136,8 @@ INSERT INTO games (
 (
     'Assassin''s Creed Valhalla',
     'https://i.pinimg.com/736x/b4/83/f3/b483f3eb9e9ececa9259f29905fb768a.jpg',
-    'https://i.pinimg.com/originals/b4/83/f3/b483f3eb9e9ececa9259f29905fb768a.jpg',
-    'https://i.pinimg.com/originals/b4/83/f3/b483f3eb9e9ececa9259f29905fb768a.jpg',
+    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg?t=1754572990',
+    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.1920x1080.jpg?t=1754572990',
     '8.5',
     '2020-11-10',
     12345,
@@ -150,8 +150,8 @@ INSERT INTO games (
 (
     'Mass Effect Legendary Edition',
     'https://i.pinimg.com/736x/4e/68/ab/4e68ab0ac6981623a8f7f1c04f5cb77b.jpg',
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/header.jpg?t=1754572990',
-    'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.1920x1080.jpg?t=1754572990',
+    'https://i.pinimg.com/1200x/3c/a9/64/3ca9644f709dd49764061739cd603ab9.jpg',
+    'https://i.pinimg.com/1200x/87/1f/0f/871f0fd97875f6e2fbaf88ddb40af0a3.jpg',
     '9.2',
     '2021-05-14',
     9876,
