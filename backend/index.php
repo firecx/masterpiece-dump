@@ -116,7 +116,7 @@ function getSearchQuery(): ?string
  */
 function getGameSelectFields(): string
 {
-    return "g.id, g.gName, g.cover_url, g.rating, g.release_date, 
+    return "g.id, g.gName, g.cover_url, g.cover_url_horizontal, g.cover_url_big_horizontal, g.rating, g.release_date, 
             g.likes, g.price, g.annotation, g.system_requirements,
             d.dName AS developer, p.pName AS publisher,
             COALESCE(
