@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!data) return;
         const name = data.gname || data.name || data.title || data.gameName || '';
         setText('.game-name', name);
-        setAttr('.big-img', 'src', data.big_image || data.screenshot || data.screenshots && data.screenshots[0] || 'img/big-img.png');
+        setAttr('.big-img', 'src', data.cover_url_big_horizontal || 'img/big-img.png');
         //вставить data.cover_url ||
-        setAttr('.game-cover', 'src',  'img/game-cover.png');
+        setAttr('.game-cover', 'src',  data.cover_url_horizontal || 'img/game-cover.png');
         setText('.game-description', data.description || data.long_description || data.short_description || '');
 
         const release = data.release_date || data.release || data.published || '';
