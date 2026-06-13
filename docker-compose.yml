@@ -12,8 +12,6 @@ services:
       - nginx-backend
     ports:
       - "8090:80"
-    networks:
-      - proxy-network
   php:
     build:
       context: ./backend
@@ -62,5 +60,3 @@ volumes:
 networks:
   app-network:
     driver: bridge
-  proxy-network:
-    external: true
