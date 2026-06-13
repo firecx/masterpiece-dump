@@ -14,9 +14,9 @@ CREATE TABLE IF NOT EXISTS publishers (
 CREATE TABLE IF NOT EXISTS games (
     id SERIAL PRIMARY KEY,
     gName VARCHAR(200) NOT NULL,
-    cover_url VARCHAR(500),
-    cover_url_horizontal VARCHAR(500),
-    cover_url_big_horizontal VARCHAR(500),
+    cover_url VARCHAR(1000),
+    cover_url_horizontal VARCHAR(1000),
+    cover_url_big_horizontal VARCHAR(1000),
     rating VARCHAR(4),
     release_date DATE,
     likes INT,
