@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/all-developers-styles.css">
-    <title>Все разработчики — Свалка Шедевров</title>
+    <link rel="stylesheet" href="css/all-games-styles.css">
+    <title>Все игры — Свалка Шедевров</title>
 </head>
 <body>
     <header>
         <div class="header-line">
-            <a href="/" class="title-name">Свалка Шедевров</a>
+            <a href="index.html" class="title-name">Свалка Шедевров</a>
             <div class="line-links">
                     <a href="all-games.html">Игры</a>
                     <a href="all-developers.html">Разработчики</a>
@@ -18,10 +18,14 @@
         </div>
     </header>
     <main>
-        <h1 class="page-title">Все разработчики</h1>
-        <div class="developers-container">
-            <!-- developer sections will be injected here by js/all-developers.js -->
+        <h1 class="page-title">Все игры</h1>
+        <div class="games-grid">
+            <!-- game cards will be injected here by js/all-games.js -->
         </div>
+        <div class="games-loader" style="display: none;">
+            <p>Загрузка игр...</p>
+        </div>
+        <div class="games-sentinel"></div>
     </main>
     <footer>
         <div class="copyright">
@@ -34,6 +38,6 @@
             <a href="">[Правообладателям]</a>
         </div>
     </footer>
-    <script src="js/all-developers.js"></script>
+    <script src="js/all-games.js"></script>
 </body>
 </html>
